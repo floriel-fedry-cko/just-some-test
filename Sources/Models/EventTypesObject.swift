@@ -11,9 +11,4 @@ public class EventTypesObject: Codable {
         self.version = version
     }
 
-    private enum CodingKeys: String, CodingKey {
-        case eventTypes = "event_types"
-        case version
-    }
-
 }

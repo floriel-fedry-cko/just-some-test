@@ -81,7 +81,12 @@ public class DataType: Codable {
     /** The status of the payment */
     public var status: Status?
 
-    public init(_3ds: [String: String]? = nil, actionId: String? = nil, amount: Int? = nil, approved: Bool? = nil, authCode: String? = nil, currency: String? = nil, customer: [String: String]? = nil, destinations: [PaymentDestination]? = nil, flagged: Bool? = nil, id: String? = nil, metadata: [String: String]? = nil, processedOn: String? = nil, reference: String? = nil, responseCode: String? = nil, responseSummary: String? = nil, source: [String: String]? = nil, status: Status? = nil) {
+    public init(_3ds: [String: String]? = nil, actionId: String? = nil, amount: Int? = nil, approved: Bool? = nil,
+                authCode: String? = nil, currency: String? = nil, customer: [String: String]? = nil,
+                destinations: [PaymentDestination]? = nil, flagged: Bool? = nil, id: String? = nil,
+                metadata: [String: String]? = nil, processedOn: String? = nil, reference: String? = nil,
+                responseCode: String? = nil, responseSummary: String? = nil, source: [String: String]? = nil,
+                status: Status? = nil) {
         self._3ds = _3ds
         self.actionId = actionId
         self.amount = amount

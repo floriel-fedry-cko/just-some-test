@@ -24,7 +24,10 @@ public class Card: Codable {
 
     public var paymentMethod: String?
 
-    public init(avsCheck: String? = nil, billingDetails: BillingDetails? = nil, customerId: String? = nil, cvvCheck: String? = nil, expiryMonth: String? = nil, expiryYear: String? = nil, fingerprint: String? = nil, id: String? = nil, last4: String? = nil, name: String? = nil, paymentMethod: String? = nil) {
+    public init(avsCheck: String? = nil, billingDetails: BillingDetails? = nil, customerId: String? = nil,
+                cvvCheck: String? = nil, expiryMonth: String? = nil, expiryYear: String? = nil,
+                fingerprint: String? = nil, id: String? = nil, last4: String? = nil, name: String? = nil,
+                paymentMethod: String? = nil) {
         self.avsCheck = avsCheck
         self.billingDetails = billingDetails
         self.customerId = customerId
