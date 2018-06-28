@@ -8,5 +8,9 @@ public class InvalidError: ErrorType {
         self.details = details
         super.init(errorType: errorType, requestId: requestId)
     }
-
+    
+    required public init(from decoder: Decoder) throws {
+        fatalError("init(from:) has not been implemented")
+    }
+    
 }
