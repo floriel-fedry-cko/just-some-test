@@ -1,5 +1,5 @@
 import Foundation
 
-/** The payment actions
- */
+/// The payment actions
+ 
 public typealias PaymentActionsResponse = [PaymentAction]

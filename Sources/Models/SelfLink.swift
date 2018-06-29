@@ -2,7 +2,7 @@ import Foundation
 
 public class SelfLink: Codable {
 
-    /** The link type */
+    /// The link type 
     public enum Rel: String, Codable {
         case `self` = "self"
 
@@ -11,7 +11,7 @@ public class SelfLink: Codable {
         ]
     }
 
-    /** The link type */
+    /// The link type 
     public var rel: Rel
 
     public init(rel: Rel) {

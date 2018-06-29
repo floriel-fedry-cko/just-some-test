@@ -2,7 +2,7 @@ import Foundation
 
 public class WebhookRequest: Codable {
 
-    /** The content type to be sent to the webhook endpoint */
+    /// The content type to be sent to the webhook endpoint 
     public enum ContentType: String, Codable {
         case json = "json"
         case xml = "xml"
@@ -13,13 +13,13 @@ public class WebhookRequest: Codable {
         ]
     }
 
-    /** Your webhook endpoint */
+    /// Your webhook endpoint 
     public var url: String
 
-    /** Whether the webhook is active */
+    /// Whether the webhook is active 
     public var active: Bool?
 
-    /** The content type to be sent to the webhook endpoint */
+    /// The content type to be sent to the webhook endpoint 
     public var contentType: ContentType?
 
     public var eventTypes: WebhookEvents?

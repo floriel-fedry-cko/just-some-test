@@ -2,29 +2,29 @@ import Foundation
 
 public class File: Codable {
 
-    /** The file identifier */
+    /// The file identifier 
     public var id: String
 
-    /** The file name */
+    /// The file name 
     public var filename: String
 
-    /** The purpose of the uploaded file */
+    /// The purpose of the uploaded file 
     public var purpose: String
 
-    /** The size in bytes of the file upload object */
+    /// The size in bytes of the file upload object 
     public var size: Double
 
-    /** File upload date and time in UTC */
+    /// File upload date and time in UTC 
     public var uploadedOn: String
 
     public var links: Links
 
     public class Links: Codable {
 
-        /** The file information retrieval URL */
+        /// The file information retrieval URL 
         public var `self`: [String: String]
 
-        /** The temporary file download URL. The URL expires after a certain time period */
+        /// The temporary file download URL. The URL expires after a certain time period 
         public var download: [String: String]
 
         public init(`sel`: [String: String], download: [String: String]) {

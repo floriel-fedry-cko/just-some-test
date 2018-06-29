@@ -2,17 +2,17 @@ import Foundation
 
 public class SubmitBatchResponse: Codable {
 
-    /** Batch identifier */
+    /// Batch identifier 
     public var id: String
 
-    /** The batch status */
+    /// The batch status 
     public var status: String
 
     public var links: Links
 
     public class Links: Codable {
 
-        /** The URI of the batch */
+        /// The URI of the batch 
         public var `self`: [String: String]
 
         public init(`sel`: [String: String]) {

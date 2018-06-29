@@ -2,15 +2,15 @@ import Foundation
 
 public class NotificationSummary: Codable {
 
-    /** The links related to the notification */
+    /// The links related to the notification 
     public var links: Links?
 
     public var id: NotificationId?
 
-    /** Whether the notification eventually succeeded */
+    /// Whether the notification eventually succeeded 
     public var success: Bool?
 
-    /** The notification endpoint */
+    /// The notification endpoint 
     public var url: String?
 
     public class Links: Codable {

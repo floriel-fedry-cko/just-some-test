@@ -2,8 +2,8 @@ import Foundation
 
 extension API.Webhooks {
 
-    /** Updates an existing webhook
- */
+    /// Updates an existing webhook
+ 
     public enum PutWebhooksById {
 
         public static let service = APIService<Response>(id: "putWebhooksById", tag: "Webhooks", method: "PUT", path: "/webhooks/{id}", hasBody: true)
@@ -12,8 +12,8 @@ extension API.Webhooks {
 
             public struct Options {
 
-                /** The webhook identifier, for example `wh_387ac7a83a054e37ae140105429d76b5`
- */
+                /// The webhook identifier, for example `wh_387ac7a83a054e37ae140105429d76b5`
+ 
                 public var id: String
 
                 public init(id: String) {
@@ -45,19 +45,19 @@ extension API.Webhooks {
         public enum Response: APIResponseValue, CustomStringConvertible, CustomDebugStringConvertible {
             public typealias SuccessType = Webhook
 
-            /** Updated webhook */
+            /// Updated webhook 
             case status200(Webhook)
 
-            /** Unauthorized */
+            /// Unauthorized 
             case status401
 
-            /** Webhook not found */
+            /// Webhook not found 
             case status404
 
-            /** Url already registered for another webhook */
+            /// Url already registered for another webhook 
             case status409
 
-            /** Invalid data was sent */
+            /// Invalid data was sent 
             case status422(ValidationError)
 
             public var success: Webhook? {

@@ -2,14 +2,14 @@ import Foundation
 
 extension API.Files {
 
-    /** Upload a file so that it can be used by other APIs, e.g. submit dispute evidence. 
-        The file requirements (type/size) differ depending on the file `purpose`.
-         */
+    /// Upload a file so that it can be used by other APIs, e.g. submit dispute evidence. 
+    /// The file requirements (type/size) differ depending on the file `purpose`.
+         
     public enum PostFiles {
 
         public static let service = APIService<Response>(id: "postFiles", tag: "Files", method: "POST", path: "/files", hasBody: true)
 
-        /** The purpose of the file upload */
+        /// The purpose of the file upload 
         public enum Purpose: String, Codable {
             case disputeEvidence = "dispute_evidence"
             case onboardingDocument = "onboarding_document"
@@ -26,10 +26,10 @@ extension API.Files {
 
             public struct Options {
 
-                /** The file to upload */
+                /// The file to upload 
                 public var file: URL
 
-                /** The purpose of the file upload */
+                /// The purpose of the file upload 
                 public var purpose: Purpose
 
                 public init(file: URL, purpose: Purpose) {
@@ -56,13 +56,13 @@ extension API.Files {
         public enum Response: APIResponseValue, CustomStringConvertible, CustomDebugStringConvertible {
             public typealias SuccessType = FileUploadResponse
 
-            /** File uploaded successfully */
+            /// File uploaded successfully 
             case status201(FileUploadResponse)
 
-            /** Unauthorized */
+            /// Unauthorized 
             case status401
 
-            /** Invalid data was sent */
+            /// Invalid data was sent 
             case status422(ValidationError)
 
             public var success: FileUploadResponse? {

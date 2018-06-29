@@ -1,4 +1,4 @@
 import Foundation
 
-/** The payment identifier */
+/// The payment identifier 
 public typealias PaymentId = String

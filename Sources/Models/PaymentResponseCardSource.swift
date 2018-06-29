@@ -1,6 +1,6 @@
 import Foundation
 
-/** A card payment source */
+/// A card payment source 
 public class PaymentResponseCardSource: Codable {
 
     public init() {

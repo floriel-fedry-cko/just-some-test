@@ -2,32 +2,32 @@ import Foundation
 
 public class SourceRequest: Codable {
 
-    /** The payment source type */
+    /// The payment source type 
     public var type: String
 
-    /** The payment source owner's billing address */
+    /// The payment source owner's billing address 
     public var billingAddress: String?
 
-    /** Details of the customer to associate with the source */
+    /// Details of the customer to associate with the source 
     public var customer: Customer?
 
-    /** The payment source owner's phone number */
+    /// The payment source owner's phone number 
     public var phone: String?
 
-    /** A reference you can later use to identify the source */
+    /// A reference you can later use to identify the source 
     public var reference: String?
 
     public class Customer: Codable {
 
-        /** An optional email address to associate with the customer */
+        /// An optional email address to associate with the customer 
         public var email: String?
 
-        /** The identifier of an existing customer. If neither customer `id` or `email` is provided
-    a new customer will be registered
-     */
+        /// The identifier of an existing customer. If neither customer `id` or `email` is provided
+        /// a new customer will be registered
+     
         public var id: String?
 
-        /** The customer's name. This will only set the name for *new* customers */
+        /// The customer's name. This will only set the name for *new* customers 
         public var name: String?
 
         public init(email: String? = nil, id: String? = nil, name: String? = nil) {

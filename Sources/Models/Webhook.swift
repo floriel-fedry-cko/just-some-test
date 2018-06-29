@@ -28,7 +28,7 @@ public class Webhook: Codable {
 
     public class Links: Codable {
 
-        /** The URI of the payment source */
+        /// The URI of the payment source 
         public var `self`: [String: String]?
 
         public init(`sel`: [String: String]? = nil) {

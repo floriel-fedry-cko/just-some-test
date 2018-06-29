@@ -1,45 +1,45 @@
 import Foundation
 
-/** Payment response */
+/// Payment response 
 public class VoidResponse: Codable {
 
-    /** Payment unique identifier */
+    /// Payment unique identifier 
     public var id: String
 
-    /** The unique identifier for the void action */
+    /// The unique identifier for the void action 
     public var actionId: String
 
-    /** The void amount */
+    /// The void amount 
     public var amount: Int
 
-    /** The three-letter ISO currency code of the payment */
+    /// The three-letter ISO currency code of the payment 
     public var currency: String
 
-    /** The status of the payment */
+    /// The status of the payment 
     public var status: String
 
-    /** Gateway response code */
+    /// Gateway response code 
     public var responseCode: String
 
-    /** The date/time the void was processed */
+    /// The date/time the void was processed 
     public var processedOn: String
 
-    /** The links related to the payment */
+    /// The links related to the payment 
     public var links: Links
 
-    /** Your reference for the void request */
+    /// Your reference for the void request 
     public var reference: String?
 
-    /** The Gateway response summary */
+    /// The Gateway response summary 
     public var responseSummary: String?
 
-    /** Payment response */
+    /// Payment response 
     public class Links: Codable {
 
-        /** The URI of the payment */
+        /// The URI of the payment 
         public var payment: [String: String]
 
-        /** A link to the full response code details */
+        /// A link to the full response code details 
         public var responseCode: [String: String]?
 
         public init(payment: [String: String], responseCode: [String: String]? = nil) {

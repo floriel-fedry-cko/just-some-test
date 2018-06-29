@@ -3,7 +3,7 @@
 // https://github.com/yonaskolb/SwagGen
 //
 
-/** The response media type */
+/// The response media type 
 public enum MediaType: String, Codable {
     case applicationjson = "application/json"
 

@@ -1,4 +1,4 @@
 import Foundation
 
-/** The unique notification identifier */
+/// The unique notification identifier 
 public typealias NotificationId = String

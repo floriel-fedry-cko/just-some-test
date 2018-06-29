@@ -1,6 +1,6 @@
 import Foundation
 
-/** Source response with redirection */
+/// Source response with redirection 
 public class SourceRedirectResponse: Codable {
 
     public init() {}

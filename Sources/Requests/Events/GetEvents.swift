@@ -2,7 +2,7 @@ import Foundation
 
 extension API.Events {
 
-    /** Retrieves events ordered by the event date in descending order (latest first). Results can be paged by specifying the `skip` and `limit` query parameters. */
+    /// Retrieves events ordered by the event date in descending order (latest first). Results can be paged by specifying the `skip` and `limit` query parameters. 
     public enum GetEvents {
 
         public static let service = APIService<Response>(id: "getEvents", tag: "Events", method: "GET", path: "/events", hasBody: false)
@@ -11,16 +11,16 @@ extension API.Events {
 
             public struct Options {
 
-                /** An ISO8601 formatted date and time to search from (default = last 6 months) */
+                /// An ISO8601 formatted date and time to search from (default = last 6 months) 
                 public var from: DateTime?
 
-                /** An ISO8601 formatted date and time to search to (default = now) */
+                /// An ISO8601 formatted date and time to search to (default = now) 
                 public var to: DateTime?
 
-                /** The number of events to return per page */
+                /// The number of events to return per page 
                 public var limit: Int?
 
-                /** The number of events to skip */
+                /// The number of events to skip 
                 public var skip: Int?
 
                 public init(from: DateTime? = nil, to: DateTime? = nil, limit: Int? = nil, skip: Int? = nil) {
@@ -49,16 +49,16 @@ extension API.Events {
         public enum Response: APIResponseValue, CustomStringConvertible, CustomDebugStringConvertible {
             public typealias SuccessType = EventResult
 
-            /** Events retrieved successfully */
+            /// Events retrieved successfully 
             case status200(EventResult)
 
-            /** No events found */
+            /// No events found 
             case status204
 
-            /** Unauthorized */
+            /// Unauthorized 
             case status401
 
-            /** Invalid data was sent */
+            /// Invalid data was sent 
             case status422(ValidationError)
 
             public var success: EventResult? {

@@ -1,9 +1,9 @@
 import Foundation
 
-/** Payment source */
+/// Payment source 
 public class PaymentSource: Codable {
 
-    /** The card category */
+    /// The card category 
     public enum CardCategory: String, Codable {
         case consumer = "Consumer"
         case commercial = "Commercial"
@@ -14,7 +14,7 @@ public class PaymentSource: Codable {
         ]
     }
 
-    /** The card type */
+    /// The card type 
     public enum CardType: String, Codable {
         case credit = "Credit"
         case debit = "Debit"
@@ -27,61 +27,61 @@ public class PaymentSource: Codable {
         ]
     }
 
-    /** The payment source identifier. Can be used for subsequent payments */
+    /// The payment source identifier. Can be used for subsequent payments 
     public var id: String
 
-    /** The type of payment source */
+    /// The type of payment source 
     public var type: String
 
-    /** The Address Verification System check result */
+    /// The Address Verification System check result 
     public var avsCheck: String?
 
-    /** The payment source owner's billing address */
+    /// The payment source owner's billing address 
     public var billingAddress: String?
 
-    /** The card issuer BIN */
+    /// The card issuer BIN 
     public var bin: String?
 
-    /** The card category */
+    /// The card category 
     public var cardCategory: CardCategory?
 
-    /** The card type */
+    /// The card type 
     public var cardType: CardType?
 
-    /** The CVV check result */
+    /// The CVV check result 
     public var cvvCheck: String?
 
-    /** The two-digit expiry month */
+    /// The two-digit expiry month 
     public var expiryMonth: Int?
 
-    /** The four-digit expiry year */
+    /// The four-digit expiry year 
     public var expiryYear: Int?
 
-    /** Uniquely identifies this particular card number. You can use this to compare cards across customers */
+    /// Uniquely identifies this particular card number. You can use this to compare cards across customers 
     public var fingerprint: String?
 
-    /** The name of the card issuer */
+    /// The name of the card issuer 
     public var issuer: String?
 
-    /** The card issuer country ISO-2 code */
+    /// The card issuer country ISO-2 code 
     public var issuerCountry: String?
 
-    /** The last four digits of the card number */
+    /// The last four digits of the card number 
     public var last4: String?
 
-    /** The card-holder name */
+    /// The card-holder name 
     public var name: String?
 
-    /** The payment source owner's phone number */
+    /// The payment source owner's phone number 
     public var phone: String?
 
-    /** The issuer/card scheme product identifier */
+    /// The issuer/card scheme product identifier 
     public var productId: String?
 
-    /** The issuer/card scheme product type */
+    /// The issuer/card scheme product type 
     public var productType: String?
 
-    /** The card scheme */
+    /// The card scheme 
     public var scheme: String?
 
     public init(id: String, type: String, avsCheck: String? = nil, billingAddress: String? = nil, bin: String? = nil,

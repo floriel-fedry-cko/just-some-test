@@ -1,9 +1,9 @@
 import Foundation
 
-/** Payment Response */
+/// Payment Response 
 public class PaymentResponse: Codable {
 
-    /** The status of the payment */
+    /// The status of the payment 
     public enum Status: String, Codable {
         case pending = "Pending"
         case authorized = "Authorized"
@@ -30,73 +30,73 @@ public class PaymentResponse: Codable {
         ]
     }
 
-    /** Payment unique identifier */
+    /// Payment unique identifier 
     public var id: String
 
-    /** The unique identifier for the action performed against this payment */
+    /// The unique identifier for the action performed against this payment 
     public var actionId: String
 
-    /** The payment amount */
+    /// The payment amount 
     public var amount: Int
 
-    /** The three-letter ISO currency code of the payment */
+    /// The three-letter ISO currency code of the payment 
     public var currency: String
 
-    /** Whether the payment request was approved */
+    /// Whether the payment request was approved 
     public var approved: Bool
 
-    /** The status of the payment */
+    /// The status of the payment 
     public var status: Status
 
-    /** Gateway response code */
+    /// Gateway response code 
     public var responseCode: String
 
-    /** The date/time the payment was processed */
+    /// The date/time the payment was processed 
     public var processedOn: String
 
-    /** The customer to which this payment is linked */
+    /// The customer to which this payment is linked 
     public var customer: [String: String]
 
-    /** The source of the payment */
+    /// The source of the payment 
     public var source: [String: String]
 
-    /** The links related to the payment */
+    /// The links related to the payment 
     public var links: Links
 
-    /** Provides 3D-Secure enrollment status if the payment was downgraded to Non-3DS */
+    /// Provides 3D-Secure enrollment status if the payment was downgraded to Non-3DS 
     public var _3ds: [String: String]?
 
-    /** The acquirer authorization code if the payment was Authorized */
+    /// The acquirer authorization code if the payment was Authorized 
     public var authCode: String?
 
-    /** Your reference for the payment */
+    /// Your reference for the payment 
     public var reference: String?
 
-    /** The Gateway response summary */
+    /// The Gateway response summary 
     public var responseSummary: String?
 
-    /** Returns the payments risk assessment results */
+    /// Returns the payments risk assessment results 
     public var risk: Risk?
 
-    /** Payment Response */
+    /// Payment Response 
     public class Links: Codable {
 
-        /** The URI of the payment */
+        /// The URI of the payment 
         public var `self`: [String: String]
 
-        /** A link to the payment's associated actions */
+        /// A link to the payment's associated actions 
         public var actions: [String: String]
 
-        /** A link to capture the payment, where applicable */
+        /// A link to capture the payment, where applicable 
         public var capture: [String: String]?
 
-        /** A link to refund the payment, where applicable */
+        /// A link to refund the payment, where applicable 
         public var refund: [String: String]?
 
-        /** A link to the full response code details */
+        /// A link to the full response code details 
         public var responseCode: [String: String]?
 
-        /** A link to void the payment, where applicable */
+        /// A link to void the payment, where applicable 
         public var void: [String: String]?
 
         public init(`sel`: [String: String], actions: [String: String], capture: [String: String]? = nil, refund: [String: String]? = nil, responseCode: [String: String]? = nil, void: [String: String]? = nil) {
@@ -110,10 +110,10 @@ public class PaymentResponse: Codable {
 
     }
 
-    /** Payment Response */
+    /// Payment Response 
     public class Risk: Codable {
 
-        /** Whether the payment was flagged by a risk check */
+        /// Whether the payment was flagged by a risk check 
         public var flagged: Bool?
 
         public init(flagged: Bool? = nil) {

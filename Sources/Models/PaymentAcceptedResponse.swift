@@ -1,9 +1,9 @@
 import Foundation
 
-/** Payment response */
+/// Payment response 
 public class PaymentAcceptedResponse: Codable {
 
-    /** The status of the payment */
+    /// The status of the payment 
     public enum Status: String, Codable {
         case pending = "Pending"
 
@@ -12,31 +12,31 @@ public class PaymentAcceptedResponse: Codable {
         ]
     }
 
-    /** Payment unique identifier */
+    /// Payment unique identifier 
     public var id: String
 
-    /** The status of the payment */
+    /// The status of the payment 
     public var status: Status
 
-    /** The customer to which this payment is linked */
+    /// The customer to which this payment is linked 
     public var customer: [String: String]
 
-    /** Provides 3D-Secure enrollment status */
+    /// Provides 3D-Secure enrollment status 
     public var _3ds: [String: String]?
 
-    /** Payment links */
+    /// Payment links 
     public var links: Links?
 
-    /** Your reference for the payment request */
+    /// Your reference for the payment request 
     public var reference: String?
 
-    /** Payment response */
+    /// Payment response 
     public class Links: Codable {
 
-        /** The URI of the payment */
+        /// The URI of the payment 
         public var `self`: [String: String]
 
-        /** The URI that the customer should be redirected to, to complete the payment */
+        /// The URI that the customer should be redirected to, to complete the payment 
         public var redirect: [String: String]?
 
         public init(`sel`: [String: String], redirect: [String: String]? = nil) {

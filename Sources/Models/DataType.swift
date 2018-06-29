@@ -50,7 +50,7 @@ public class DataType: Codable {
     public var customer: [String: String]?
 
     /// For OpenPay payments, destinations determine the proportion of the payment amount that should
-        be credited to other OpenPay accounts
+    /// be credited to other OpenPay accounts
          
     public var destinations: [PaymentDestination]?
 

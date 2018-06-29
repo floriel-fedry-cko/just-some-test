@@ -2,7 +2,7 @@ import Foundation
 
 public class PaymentAction: Codable {
 
-    /** The type of action */
+    /// The type of action 
     public enum `Type`: String, Codable {
         case authorization = "Authorization"
         case cardVerification = "Card Verification"
@@ -19,39 +19,39 @@ public class PaymentAction: Codable {
         ]
     }
 
-    /** The unique identifier of the payment action */
+    /// The unique identifier of the payment action 
     public var id: String
 
-    /** The type of action */
+    /// The type of action 
     public var type: `Type`
 
-    /** The action amount */
+    /// The action amount 
     public var amount: Int
 
-    /** Gateway response code */
+    /// Gateway response code 
     public var responseCode: String
 
-    /** The date/time the action was processed */
+    /// The date/time the action was processed 
     public var processedOn: String
 
-    /** The links related to the action */
+    /// The links related to the action 
     public var links: Links?
 
-    /** The acquirer authorization code for cards */
+    /// The acquirer authorization code for cards 
     public var authCode: String?
 
-    /** Set of key/value pairs that you can attach to an action */
+    /// Set of key/value pairs that you can attach to an action 
     public var metadata: [String: String]?
 
-    /** Your reference for the action */
+    /// Your reference for the action 
     public var reference: String?
 
-    /** The Gateway response summary */
+    /// The Gateway response summary 
     public var responseSummary: String?
 
     public class Links: Codable {
 
-        /** A link to the full response code details */
+        /// A link to the full response code details 
         public var responseCode: [String: String]?
 
         public init(responseCode: [String: String]? = nil) {
