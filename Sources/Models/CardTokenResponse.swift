@@ -1,6 +1,6 @@
 import Foundation
 
-/** Card Token Response */
+/// Card Token Response
 public class CardTokenResponse: Codable {
 
     public init() {}

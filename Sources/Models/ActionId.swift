@@ -1,4 +1,4 @@
 import Foundation
 
-/** The action identifier */
+/// The action identifier
 public typealias ActionId = String

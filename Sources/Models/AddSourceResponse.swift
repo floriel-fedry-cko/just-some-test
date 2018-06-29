@@ -2,16 +2,16 @@ import Foundation
 
 public class AddSourceResponse: Codable {
 
-    /** The payment source type */
+    /// The payment source type
     public var type: String
 
-    /** The customer to which the payment source is linked */
+    /// The customer to which the payment source is linked
     public var customer: [String: String]
 
-    /** Gateway response code */
+    /// Gateway response code
     public var responseCode: String
 
-    /** The unique identifier of the payment source that can be later used for payments */
+    /// The unique identifier of the payment source that can be later used for payments
     public var id: String?
 
     public init(type: String, customer: [String: String], responseCode: String, id: String? = nil) {

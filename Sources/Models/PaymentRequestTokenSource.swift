@@ -1,9 +1,7 @@
 import Foundation
 
-/** A token payment source */
-public class PaymentRequestTokenSource: Codable {
-    
-    let type = "token"
+/// A token payment source
+public class PaymentRequestTokenSource: PaymentRequestSource {
     
     let token: String
     
@@ -15,6 +13,11 @@ public class PaymentRequestTokenSource: Codable {
         self.token = token
         self.billingAddress = billingAddress
         self.phone = phone
+        super.init(type: "token")
     }
-
+    
+    required public init(from decoder: Decoder) throws {
+        fatalError("init(from:) has not been implemented")
+    }
+    
 }

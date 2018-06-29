@@ -1,9 +1,7 @@
 import Foundation
 
-/** A card payment source */
-public class PaymentRequestCardSource: Codable {
-    
-    public let type = "card"
+/// A card payment source
+public class PaymentRequestCardSource: PaymentRequestSource {
     
     public var number: String
     
@@ -27,6 +25,11 @@ public class PaymentRequestCardSource: Codable {
         self.cvv = cvv
         self.billingAddress = billingAddress
         self.phone = phone
+        super.init(type: "card")
     }
-
+    
+    required public init(from decoder: Decoder) throws {
+        fatalError("init(from:) has not been implemented")
+    }
+    
 }

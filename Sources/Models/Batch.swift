@@ -2,17 +2,17 @@ import Foundation
 
 public class Batch: Codable {
 
-    /** Batch identifier */
+    /// Batch identifier
     public var id: String
 
-    /** The status of the batch */
+    /// The status of the batch
     public var status: String
 
     public var links: Links
 
     public class Links: Codable {
 
-        /** The URI of the batch */
+        /// The URI of the batch
         public var `self`: [String: String]
 
         public init(`sel`: [String: String]) {

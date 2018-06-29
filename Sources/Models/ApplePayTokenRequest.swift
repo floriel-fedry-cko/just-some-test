@@ -1,6 +1,6 @@
 import Foundation
 
-/** Apple Pay Token Request */
+/// Apple Pay Token Request
 public class ApplePayTokenRequest: Codable {
 
     public init() {}

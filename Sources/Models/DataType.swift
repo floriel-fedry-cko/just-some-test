@@ -1,9 +1,9 @@
 import Foundation
 
-/** Event Data */
+/// Event Data 
 public class DataType: Codable {
 
-    /** The status of the payment */
+    /// The status of the payment 
     public enum Status: String, Codable {
         case pending = "Pending"
         case authorized = "Authorized"
@@ -28,57 +28,57 @@ public class DataType: Codable {
         ]
     }
 
-    /** Provides 3D-Secure enrollment status if the payment was downgraded to Non-3DS */
+    /// Provides 3D-Secure enrollment status if the payment was downgraded to Non-3DS 
     public var _3ds: [String: String]?
 
-    /** The unique identifier for the action performed against this payment */
+    /// The unique identifier for the action performed against this payment 
     public var actionId: String?
 
-    /** The payment amount */
+    /// The payment amount 
     public var amount: Int?
 
-    /** Whether the payment request was approved */
+    /// Whether the payment request was approved 
     public var approved: Bool?
 
-    /** The acquirer authorization code if the payment was Authorized */
+    /// The acquirer authorization code if the payment was Authorized 
     public var authCode: String?
 
-    /** The three-letter ISO currency code of the payment */
+    /// The three-letter ISO currency code of the payment 
     public var currency: String?
 
-    /** The customer to which this payment is linked */
+    /// The customer to which this payment is linked 
     public var customer: [String: String]?
 
-    /** For OpenPay payments, destinations determine the proportion of the payment amount that should
+    /// For OpenPay payments, destinations determine the proportion of the payment amount that should
         be credited to other OpenPay accounts
-         */
+         
     public var destinations: [PaymentDestination]?
 
-    /** Whether the payment was flagged by a risk check */
+    /// Whether the payment was flagged by a risk check 
     public var flagged: Bool?
 
-    /** Payment unique identifier */
+    /// Payment unique identifier 
     public var id: String?
 
-    /** Set of key/value pairs that you can attach to a payment. It can be useful for storing additional information in a structured format */
+    /// Set of key/value pairs that you can attach to a payment. It can be useful for storing additional information in a structured format 
     public var metadata: [String: String]?
 
-    /** The date/time the payment was processed */
+    /// The date/time the payment was processed 
     public var processedOn: String?
 
-    /** Your reference for the payment */
+    /// Your reference for the payment 
     public var reference: String?
 
-    /** Gateway response code */
+    /// Gateway response code 
     public var responseCode: String?
 
-    /** The Gateway response summary */
+    /// The Gateway response summary 
     public var responseSummary: String?
 
-    /** The source of the payment */
+    /// The source of the payment 
     public var source: [String: String]?
 
-    /** The status of the payment */
+    /// The status of the payment 
     public var status: Status?
 
     public init(_3ds: [String: String]? = nil, actionId: String? = nil, amount: Int? = nil, approved: Bool? = nil,
